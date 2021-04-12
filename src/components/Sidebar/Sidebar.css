@@ -8,3 +8,15 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.sidebar-logo {
+    height: 70px;
+    padding: 10px;
+    margin-right: auto;
+}
+
+.sidebar-title {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 12px;
+}
