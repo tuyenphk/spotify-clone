@@ -1,10 +1,15 @@
 import React from 'react'
 import './App.css';
+import Login from './components/Login/Login'
 
 function App() {
   return (
-    <div className="App">
-      Spotify clone
+    <div className="app">
+
+      {/* Spotify logo */}
+      {/* Login with spotify button */}
+      <Login />
+
     </div>
   );
 }
