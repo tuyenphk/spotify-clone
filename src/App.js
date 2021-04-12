@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import './App.css';
 import Login from './pages/Login/Login'
 import Player from './pages/Player/Player'
 import { getTokenFromUrl } from './spotify';
