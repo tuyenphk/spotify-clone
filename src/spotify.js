@@ -1,7 +1,7 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize"
 const redirectUri = "http://localhost:3000/"
 // Replace with your app's client ID, redirect URI and desired scopes
-const clientId = "cff76213089a4e228206c8bf120d67cb"
+const clientId = "e071cb2dd7724f4eb8aa78a2e9fcb834"
 
 const scopes = [
     "user-read-currently-playing",
@@ -10,6 +10,19 @@ const scopes = [
     "user-top-read",
     "user-modify-playback-state",
 ]
+
+export const getTokenFromUrl = () => {
+    return window.location.hash
+           .substring(1)
+           .split('&')
+           .reduce((initial,item) => {
+               // #accessToken = secretKey&name=
+               let parts = item.split('=');
+               initial[parts[0]] = decodeURIComponent(parts[1]);
+
+               return initial;
+           }, {})
+}
 
 export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
     "%20"
