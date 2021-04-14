@@ -14,9 +14,12 @@ function Footer() {
     return (
         <div className="footer">
             <div className="footer-left">
-                <img src="" alt="" />
-                <div className="footer-song">
-                    <h4>No song is playing</h4>
+                <img className="footer-albumLogo" 
+                     src="https://i.ibb.co/VgK6R37/maxresdefault.jpg" 
+                     alt="" />
+                <div className="footer-songInfo">
+                    <h4>Driver License</h4>
+                    <p>Olivia Rodrigo</p>
                 </div>
             </div>
 
@@ -25,7 +28,7 @@ function Footer() {
                 <SkipPreviousIcon className="footer-icon" />
                 <PlayCircleOutlineIcon fontSize="large" className="footer-icon" />
                 <SkipNextIcon className="footer-icon" />
-                <RepeatIcon className="footer-icon" />
+                <RepeatIcon className="footer-green" />
 
             </div>
 
