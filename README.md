@@ -1,5 +1,11 @@
 # SPOTIFY CLONE
 
+## URL Link
+
+The Spotify Clone is hosted at: https://spotify-clone-55132.web.app/
+
+## Features
+
 - User Authentication
 - Spotify API
 - Responsive Design
