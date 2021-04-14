@@ -8,7 +8,7 @@ import {useStateValue} from './reducer/StateProvider'
 const spotify = new SpotifyWebApi();
  
 function App() {
-  const [{user, token}, dispatch] = useStateValue();
+  const [{token}, dispatch] = useStateValue();
 
   //run code based on the given condition
   useEffect(() => {
@@ -26,10 +26,18 @@ function App() {
       //get the user account name
       spotify.getMe().then(user => {
         dispatch({
-          type: 'SET-USER',
+          type: 'SET_USER',
           user: user,
         })
       })
+
+      spotify.getUserPlaylists().then(playlists => {
+        dispatch ({
+          type: 'SET_PLAYLISTS',
+          playlists: playlists,
+        })
+      })
+
     }
   }, []);
 

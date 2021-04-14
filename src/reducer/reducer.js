@@ -4,7 +4,7 @@ export const initialState = {
     playing: false,
     item: null,
     //remove after finished developing...
-    token: null
+    // token: null
 }
 
 const reducer = (state, action) => {
@@ -21,7 +21,12 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 token: action.token
-            }
+            };
+        case 'SET_PLAYLISTS':
+            return {
+                ...state,
+                playLists: action.playLists
+            };
         default:
             return state;
     }
