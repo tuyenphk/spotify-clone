@@ -1,9 +1,11 @@
 import React from 'react'
 import './Body.css'
-function Body() {
+import Header from '../Header/Header'
+
+function Body({ spotify }) {
     return (
         <div className="body">
-            
+            <Header spotify={spotify} />
         </div>
     )
 }
