@@ -3,12 +3,12 @@ import Login from './pages/Login/Login'
 import Player from './pages/Player/Player'
 import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from 'spotify-web-api-js'
-import {useStateValue} from './reducer/StateProvider'
+import {useDataLayerValue} from './reducer/DataLayer'
 
 const spotify = new SpotifyWebApi();
  
 function App() {
-  const [{token}, dispatch] = useStateValue();
+  const [{token}, dispatch] = useDataLayerValue();
 
   //run code based on the given condition
   useEffect(() => {

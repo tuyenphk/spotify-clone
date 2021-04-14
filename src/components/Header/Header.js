@@ -1,11 +1,11 @@
 import React from 'react'
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar } from "@material-ui/core";
-import {useStateValue} from '../../reducer/StateProvider'
+import {useDataLayerValue} from '../../reducer/DataLayer'
 import './Header.css'
 
 function Header() {
-    const [{user}, dispatch] = useStateValue();
+    const [{user}, dispatch] = useDataLayerValue();
 
     return (
         <div className="header">

@@ -4,10 +4,10 @@ import SidebarOption from '../SidebarOption/SidebarOption'
 import HomeIcon from '@material-ui/icons/Home'
 import SearchIcon from '@material-ui/icons/Search'
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic'
-import { useStateValue } from '../../reducer/StateProvider'
+import { useDataLayerValue } from '../../reducer/DataLayer'
 
 function Sidebar() {
-    const [{ playlists }, dispatch] = useStateValue();
+    const [{ playlists }, dispatch] = useDataLayerValue();
 
     return (
         <div className="sidebar">
